@@ -1,10 +1,4 @@
-.hg-conteudo {
-    background-color: silver;
-}
-
-.hg-conteudo > main {
-    background-color: #aaa;
-}
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@900&family=Vollkorn:ital,wght@0,400;0,700;1,400&display=swap');
 
 body {
     margin: 0 auto;
@@ -12,29 +6,155 @@ body {
     min-height: 100vh;
     display: flex;
     flex-flow: column;
+    
+    font-family: 'Vollkorn', serif;
+    font-size: 1.2rem;
+
+    background-image: url(https://the-public-domain-review.imgix.net/collections/hi-res-images-from-the-apollo-missions/21367720004_d5dbf7a540_h.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+
+    color: #282a36;
 }
 
-.hg-conteudo {
+a {
+    text-decoration: none;
+    color: #282a36;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+body > * {
+    background-color: #ffffffdd;
+}
+
+.conteudo {
     flex: 1;
     display: flex;
     flex-flow: column;
 }
 
-.hg-conteudo > nav {
+.conteudo > nav {
     order: -1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
 }
 
-.hg-conteudo > main {
+.conteudo > nav a {
+    background-color: #282a36;
+    color: #f8f8f2;
+    border-radius: 10px;
+    margin: 0 0 5px 0;
+    padding: 2px;
+    text-align: center;
+    min-width: 100px;
+}
+
+.conteudo > nav a:hover {
+    background-color: #44475a;
+}
+
+.conteudo > nav a.atual {
+    background-color: #44475a;
+}
+
+.conteudo > main {
     flex: 1;
+    background-color: #f8f8f2;
+    padding: 0 20px;
 }
 
-@media (min-width: 768px) {
-    .hg-conteudo {
+.conteudo > main > h2 {
+    position: sticky;
+    top: 0;
+    background-color: #f8f8f2ee;
+}
+
+.conteudo > main img {
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.conteudo > aside {
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.conteudo > aside > a {
+    margin: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+
+body > header {
+    font-family: 'Cinzel Decorative', cursive;
+    padding: 10px;
+    font-size: 2rem;
+}
+
+body > header small {
+    display: block;
+    font-family: 'Vollkorn', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+}
+
+body > header > a  {
+    display: none;
+}
+
+body > footer {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+body > footer > img {
+    border-radius: 50%;
+    height: 30px;
+    float: left;
+    margin-right: 10px;
+}
+
+@media (min-width: 1000px) {
+    .conteudo {
         flex-flow: row;
     }
 
-    .hg-conteudo > aside,
-    .hg-conteudo > nav {
-        flex: 0 0 200px;
+    .conteudo > aside,
+    .conteudo > nav {
+    padding: 0 10px;
+    flex: 0 0 200px;
+        flex-flow: column;
+        justify-content: flex-start;
+    }
+    
+    .conteudo > aside {
+        flex-flow: column;
+    }
+
+    .conteudo > aside > a {
+        margin-bottom: 20px;
+    }
+
+    body > header > a {
+        display: block;
+        float: left;
+    }
+
+    body > header img {
+        display: block;
+        max-height: 80px;
+        margin-right: 30px;
     }
 }
